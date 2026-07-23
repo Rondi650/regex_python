@@ -3,6 +3,7 @@ import re
 string = """
 Olá! Meu nome é Carlos Silva e meu e-mail principal é carlos.silva@email.com, 
 mas você também pode entrar em contato pelo suporte@empresa.com.br.
+Meu salario e de R$2200
 
 Atualmente, moro na Avenida Paulista, nº 1000, no formato de CEP 01311-200. 
 Caso precise me ligar, meus números de telefone são 
@@ -14,9 +15,22 @@ O valor total do contrato ficou em R$ 1.500,50, gerando um lucro
 líquido de +25% em relação ao ano passado.
 """
 
+# procura a data
 r = re.search(r'[\d]{2}/?\d{2}/?\d{4}', string)
-r2 = re.findall(r'R\$[^,]+,\d{2}', string)
+# procura o valor monetario
+r2 = re.findall(r'(R\$ ?[^,]+,?\d{2}?)', string)
+# procura linhas vazias
 r3 = re.findall(r'^\s*$', string)
+# substitui o valor por outro com retrovisor
+r4 = re.sub(r'(R\$ ?[^,]+,?\d{2}?)', r'[\1]', string)
+# com count substitui apenas a primeira, no ex. abaixo
+r4 = re.sub(r'(R\$ ?[^,]+,?\d{2}?)', r'[\1]', string, count=1)
 print(r, r2)
 print(r2)
 print(r3)
+print(r4)
+
+# compile economiza processamento, rodando uma vez apenas o regex
+regexp = re.compile(r'([-+ ]?[\d]+%)')
+print(regexp.search(string))
+print(regexp.sub(r'(\1)', string))
