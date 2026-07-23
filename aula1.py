@@ -25,12 +25,32 @@ r3 = re.findall(r'^\s*$', string)
 r4 = re.sub(r'(R\$ ?[^,]+,?\d{2}?)', r'[\1]', string)
 # com count substitui apenas a primeira, no ex. abaixo
 r4 = re.sub(r'(R\$ ?[^,]+,?\d{2}?)', r'[\1]', string, count=1)
+
+if r:
+    print(r.group())
+    print(r.start())
+    print(r.end())
+    print(r.span())
+
 print(r, r2)
 print(r2)
 print(r3)
 print(r4)
 
+# testando grupos, como retrovisores
+print('*'*50)
+m = re.search(r'(..)/(..)/(....)', string)
+
+if m:
+    print(m.group(1))
+    print(m.group(2))
+    print(m.group(3))
+    print(m.span())
+    print(m)
+
+
 # compile economiza processamento, rodando uma vez apenas o regex
 regexp = re.compile(r'([-+ ]?[\d]+%)')
+print('*'*50)
 print(regexp.search(string))
 print(regexp.sub(r'(\1)', string))
