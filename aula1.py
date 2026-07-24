@@ -45,7 +45,7 @@ if m:
     print(m.group(1))
     print(m.group(2))
     print(m.group(3))
-    print(m.span())
+    print(m.span(1))
     print(m)
 
 
