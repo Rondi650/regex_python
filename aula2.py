@@ -13,9 +13,14 @@ No relatório final entregue às 18h, constavam registros precisos de servidores
 
     Turno noturno: das 20h30m00s até as 04:45:10 da madrugada.
 
-Um dos casos de estudo mostrou um servidor que entrou em manutenção às 13:05h, permaneceu offline até 13:08:32, e retornou às 13h08m35s. Para conferência, os tempos registrados no sistema do cliente foram 08h30, 9h, 09:05, 12h00min, 15:45:00.123, 8am e 11pm.
+Um dos casos de estudo mostrou um servidor que entrou em manutenção às 13:05h, permaneceu offfffffffffline até 13:08:32, e retornou às 13h08m35s. Para conferência, os tempos registrados no sistema do cliente foram 08h30, 9h, 09:05, 12h00min, 15:45:00.123, 8am e 11pm.
 '''
 
 # r = re.findall(r'Notur|lembra', string, flags=re.IGNORECASE)
 r = re.findall(r'\d\d[:h]\d\d[:m]?(?:\d\d)?', string)
+r2 = re.sub(r'(of+line)', r'(\1)', string)
+r3 = re.search(r'\([^)]+\)', string)
+print(type(r))
 print(r)
+print(r2)
+print(r3)
