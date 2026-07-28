@@ -22,9 +22,9 @@ r2 = re.findall(r'(R\$ ?[^,]+,?\d{2}?)', string)
 # procura linhas vazias
 r3 = re.findall(r'^\s*$', string)
 # substitui o valor por outro com retrovisor
-r4 = re.sub(r'(R\$ ?[^,]+,?\d{2}?)', r'[\1]', string)
-# com count substitui apenas a primeira, no ex. abaixo
-r4 = re.sub(r'(R\$ ?[^,]+,?\d{2}?)', r'[\1]', string, count=1)
+# r4 = re.sub(r'(R\$ ?[^,]+,?\d{2}?)', r'[\1]', string)
+# # com count substitui apenas a primeira, no ex. abaixo
+# r4 = re.sub(r'(R\$ ?[^,]+,?\d{2}?)', r'[\1]', string, count=1)
 
 if r:
     print(r.group())
@@ -35,7 +35,7 @@ if r:
 print(r, r2)
 print(r2)
 print(r3)
-print(r4)
+# print(r4)
 
 # testando grupos, como retrovisores
 print('*'*50)
