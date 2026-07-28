@@ -28,6 +28,7 @@ r3 = re.findall(r'^\s*$', string)
 
 if r:
     print(r.group())
+    print(r.groups())
     print(r.start())
     print(r.end())
     print(r.span())
@@ -42,6 +43,7 @@ print('*'*50)
 m = re.search(r'(..)/(..)/(....)', string)
 
 if m:
+    print(m.groups())
     print(m.group(1))
     print(m.group(2))
     print(m.group(3))
