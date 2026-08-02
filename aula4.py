@@ -12,3 +12,7 @@ print(tags)
 
 tags2 = re.findall(r'(<[divp]{1,3}>)(.+?)(<\/[divp]{1,3}>)', texto)
 print(tags2)
+
+# usando retrovisores para substituir textos
+# \s* no início engole qualquer espaço ou quebra de linha entre uma tag e outra
+print(re.sub(r'\s*(<.*?>)(.*?)(<\/.*?>)', r'\1[\2]\3\n', texto))
