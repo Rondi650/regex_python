@@ -7,6 +7,8 @@ texto = '''
 <p>Frase 1</p> <p>Eita</p> <p>Qualquer frase</p> <div>1</div> 
 '''
 
-tags = re.findall(r'<[divp]{1,3}>(.+?)<\/[divp]{1,3}>', texto)
-
+tags = re.findall(r'<([divp]{1,3})>(.+?)<(\/[divp]{1,3})>', texto)
 print(tags)
+
+tags2 = re.findall(r'(<[divp]{1,3}>)(.+?)(<\/[divp]{1,3}>)', texto)
+print(tags2)
