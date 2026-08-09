@@ -30,3 +30,5 @@ print('BUSCA [a-zA-Z0-9À-ú]+:\n', re.findall(r'[a-zA-Z0-9À-ú]+', texto), '\n
 print('BUSCA \\w+:\n', re.findall(r'\w+', texto), '\n')
 print('BUSCA \\s+:\n', re.findall(r'\s+', texto), '\n')
 print('BUSCA \\W+:\n', re.findall(r'\W+', texto, re.ASCII), '\n')
+print('BUSCA no inicio \\b:\n', re.findall(r'\bf[a-z]+', texto), '\n')
+print('BUSCA no final \\b:\n', re.findall(r'[a-z]+e\b', texto), '\n')
