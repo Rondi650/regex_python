@@ -22,3 +22,9 @@ pão de queijo.
 Não canso de ouvir a Maria:
 "Joooooooooãooooooo, o café tá prontinho aqui. Veeemm"!
 '''
+
+print(re.findall(r'[a-z]+', texto),'\n')
+print(re.findall(r'[a-zA-Z]+', texto),'\n')
+print(re.findall(r'[a-zA-Z0-9]+', texto),'\n')
+print(re.findall(r'[a-zA-Z0-9À-ú]+', texto),'\n')
+print(re.findall(r'\w+', texto),'\n')
