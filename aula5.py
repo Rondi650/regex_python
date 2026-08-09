@@ -23,8 +23,10 @@ Não canso de ouvir a Maria:
 "Joooooooooãooooooo, o café tá prontinho aqui. Veeemm"!
 '''
 
-print(re.findall(r'[a-z]+', texto),'\n')
-print(re.findall(r'[a-zA-Z]+', texto),'\n')
-print(re.findall(r'[a-zA-Z0-9]+', texto),'\n')
-print(re.findall(r'[a-zA-Z0-9À-ú]+', texto),'\n')
-print(re.findall(r'\w+', texto),'\n')
+print('BUSCA [a-z]+:\n', re.findall(r'[a-z]+', texto), '\n')
+print('BUSCA [a-zA-Z]+:\n', re.findall(r'[a-zA-Z]+', texto), '\n')
+print('BUSCA [a-zA-Z0-9]+:\n', re.findall(r'[a-zA-Z0-9]+', texto), '\n')
+print('BUSCA [a-zA-Z0-9À-ú]+:\n', re.findall(r'[a-zA-Z0-9À-ú]+', texto), '\n')
+print('BUSCA \\w+:\n', re.findall(r'\w+', texto), '\n')
+print('BUSCA \\s+:\n', re.findall(r'\s+', texto), '\n')
+print('BUSCA \\W+:\n', re.findall(r'\W+', texto, re.ASCII), '\n')
