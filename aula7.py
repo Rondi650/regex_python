@@ -11,5 +11,11 @@ ONLINE  192.168.0.5 GHIJK inactive
 OFFLINE  192.168.0.6 GHIJK active
 '''
 
+# Texto padrao - tudo dentro de grupos
+pprint(re.findall(r'(\w+)\s+(\d{3}.\d{3}.\d{1}.\d{1})\s+\w+\s+(\w+)', texto))
+
 # Positive lookahead
-print(re.findall(r'(\w+)\s+(\d{3}.\d{3}.\d{1}.\d{1})\s+\w+\s+(?=active)', texto))
+pprint(re.findall(r'(\w+)\s+(\d{3}.\d{3}.\d{1}.\d{1})\s+\w+\s+(?=active)', texto))
+
+# Negative lookahead
+pprint(re.findall(r'(\w+)\s+(\d{3}.\d{3}.\d{1}.\d{1})\s+\w+\s+(?!active)', texto))
