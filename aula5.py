@@ -30,7 +30,9 @@ print('BUSCA [a-zA-Z0-9À-ú]+:\n', re.findall(r'[a-zA-Z0-9À-ú]+', texto), '\n
 print('BUSCA \\w+:\n', re.findall(r'\w+', texto), '\n')
 print('BUSCA \\s+:\n', re.findall(r'\s+', texto), '\n')
 print('BUSCA \\W+:\n', re.findall(r'\W+', texto, re.ASCII), '\n')
-print('BUSCA no inicio \\b:\n', re.findall(r'\bf[a-z]+', texto), '\n')
-print('BUSCA no final \\b:\n', re.findall(r'[a-z]+e\b', texto), '\n')
+print('BUSCA no inicio \\b (começa com "f"):\n',
+      re.findall(r'\bf[a-z]+', texto), '\n')
+print('BUSCA no final \\b (termina com "e"):\n',
+      re.findall(r'[a-z]+e\b', texto), '\n')
 # A borda permite que encontre palavras sem cortes
 print('BUSCA 4 caracteres \\b:\n', re.findall(r'\b\w{4}\b', texto), '\n')
