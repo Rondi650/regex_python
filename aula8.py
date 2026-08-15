@@ -20,7 +20,7 @@ ip_reg_exp = re.compile(
     flags=0
 )
 
-# for i in range(301):
-#     ip = f'{i}.{i}.{i}.{i}'
+for i in range(301):
+    ip = f'{i}.{i}.{i}.{i}'
 
-#     print(ip, ip_reg_exp.findall(ip))
+    print(ip, ip_reg_exp.findall(ip))
