@@ -6,7 +6,7 @@ import re
 # em https://regex101.com/r/lWVPOr/1
 cpf = '025.258.963-10'
 cpf_reg_exp = re.compile(r'^\d{3}\.\d{3}\.\d{3}-\d{2}$', flags=0)
-# print(cpf_reg_exp.search(cpf))
+print(cpf_reg_exp.search(cpf))
 
 # Teste essa expressão
 # em https://regex101.com/r/XDyL7q/1
@@ -20,7 +20,7 @@ ip_reg_exp = re.compile(
     flags=0
 )
 
-for i in range(301):
-    ip = f'{i}.{i}.{i}.{i}'
+# for i in range(301):
+#     ip = f'{i}.{i}.{i}.{i}'
 
-    print(ip, ip_reg_exp.findall(ip))
+#     print(ip, ip_reg_exp.findall(ip))
